@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Yellow Pest Control Services | Delhi NCR</title>
+<meta name="description" content="Professional pest control solutions for households and businesses across Delhi NCR. Termite, rodent, wood borer, waterproofing & pipeline treatment." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="assets/logo-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+  .error{
+  display:block;
+  margin-top:5px;
+  color:#dc2626;
+  font-size:13px;
+  font-weight:500;
+}
+
+.input-error{
+  border:1px solid #dc2626 !important;
+}
+  :root{
+    --ink:#1d1a14;
+    --cream:#fffaf0;
+    --paper:#fffdf8;
+    --gold:#f5a623;
+    --gold-deep:#d4860f;
+    --amber-soft:#fff3dd;
+    --line:#f0e3c8;
+    --muted:#6b6356;
+    --black:#181512;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'DM Sans', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+  }
+  h1,h2,h3,h4{font-family:'Sora', sans-serif; font-weight:800; letter-spacing:-0.02em;}
+  a{text-decoration:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  .container{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--amber-soft); color:var(--gold-deep);
+    font-weight:700; font-size:13px; padding:6px 14px;
+    border-radius:999px; margin-bottom:18px;
+  }
+  .eyebrow::before{content:''; width:6px; height:6px; border-radius:50%; background:var(--gold-deep);}
+
+  /* HEADER */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,253,248,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 24px; max-width:1180px; margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand .logo{
+    width:46px; height:46px; border-radius:12px;
+    overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    background:#fffaf0;
+    box-shadow:0 6px 16px rgba(212,134,15,0.25);
+  }
+  .brand .logo img{width:100%; height:100%; object-fit:cover;}
+  .brand .names{display:flex; flex-direction:column; line-height:1.15;}
+  .brand .names strong{font-family:'Sora',sans-serif; font-size:17px; font-weight:800; letter-spacing:0.02em;}
+  .brand .names span{font-size:12px; color:var(--muted);}
+  nav.links{display:flex; gap:32px; font-weight:600; font-size:15px;}
+  nav.links a{color:var(--ink); position:relative; padding:4px 0;}
+  nav.links a:hover{color:var(--gold-deep);}
+  .call-btn{
+    border:1.5px solid var(--gold); color:var(--gold-deep);
+    font-weight:700; font-size:14px; padding:10px 20px;
+    border-radius:999px; white-space:nowrap;
+    transition:all .2s;
+  }
+  .call-btn:hover{background:var(--gold); color:#fff;}
+  .menu-toggle{display:none; background:none; border:none; font-size:24px; cursor:pointer;}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(160deg, var(--amber-soft) 0%, #fffdf8 60%);
+    padding:64px 0 80px;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:48px; align-items:start;
+  }
+  .pill-row{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:22px;}
+  .pill{font-size:13px; font-weight:700; padding:8px 16px; border-radius:999px;}
+  .pill.dark{background:var(--black); color:#fff;}
+  .pill.outline{background:#fff; color:var(--gold-deep); border:1px solid var(--gold);}
+  .hero h1{font-size:54px; line-height:1.08; margin-bottom:20px;}
+  .hero h1 .hl{
+    background:linear-gradient(90deg,var(--gold-deep),var(--gold));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .hero p.lead{font-size:17px; color:var(--muted); max-width:520px; margin-bottom:28px;}
+  .btn-row{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:18px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-weight:700; font-size:15px; padding:15px 26px;
+    border-radius:12px; border:1.5px solid transparent; cursor:pointer;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-deep)); color:#fff; box-shadow:0 10px 24px rgba(212,134,15,0.3);}
+  .btn-outline{background:#fff; color:var(--ink); border-color:var(--line);}
+  .btn-dark{background:var(--black); color:#fff;}
+  .btn-row-2{display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:32px;}
+  .micro-note{font-size:13px; color:var(--muted); font-weight:600;}
+
+  .stat-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+  .stat{
+    background:#fff; border:1px solid var(--line); border-radius:14px;
+    padding:16px;
+  }
+  .stat .label{font-size:12px; color:var(--muted); margin-bottom:4px;}
+  .stat .value{font-weight:800; font-family:'Sora',sans-serif; font-size:16px;}
+
+  /* HERO CARD */
+  .focus-card{
+    background:#fff; border:1px solid var(--line); border-radius:22px;
+    padding:26px; box-shadow:0 20px 50px rgba(212,134,15,0.08);
+  }
+  .focus-card .top-label{font-size:12px; color:var(--muted); margin-bottom:4px;}
+  .focus-card .top-title{display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;}
+  .focus-card .top-title h3{font-size:21px;}
+  .focus-icon{
+    width:42px; height:42px; border-radius:50%; background:var(--amber-soft);
+    display:flex; align-items:center; justify-content:center; font-size:20px;
+  }
+  .focus-item{
+    background:var(--amber-soft); border-radius:14px; padding:16px 18px;
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom:12px;
+  }
+  .focus-item .ft{font-weight:700; color:var(--gold-deep); margin-bottom:4px; font-size:15px;}
+  .focus-item .fd{font-size:13px; color:var(--muted);}
+  .focus-num{
+    width:34px; height:34px; border-radius:50%; background:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; flex-shrink:0;
+    font-family:'Sora',sans-serif; color:var(--gold-deep); font-size:14px;
+  }
+  .cta-banner{
+    background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 18px;
+    display:flex; align-items:center; justify-content:space-between; margin-top:6px;
+  }
+  .cta-banner .ct{font-size:12px; color:var(--muted);}
+  .cta-banner .cb{font-weight:800; font-size:15px;}
+  .book-pill{
+    background:var(--black); color:#fff; font-weight:700; font-size:13px;
+    padding:10px 20px; border-radius:999px; border:none; cursor:pointer;
+  }
+
+  /* SECTION GENERAL */
+  section{padding:80px 0;}
+  .section-head{max-width:680px; margin-bottom:48px;}
+  .section-head h2{font-size:38px; margin-bottom:14px;}
+  .section-head p{color:var(--muted); font-size:16px;}
+  .section-head.center{margin-left:auto; margin-right:auto; text-align:center;}
+
+  /* ABOUT */
+  .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;}
+  .about-grid h2{font-size:38px; margin-bottom:16px; line-height:1.15;}
+  .about-grid > div:first-child p.lead{color:var(--muted); margin-bottom:26px; font-size:16px;}
+  .info-box{
+    border:1px solid var(--line); border-radius:16px; padding:22px; margin-bottom:16px;
+    background:#fff;
+  }
+  .info-box h4{color:var(--gold-deep); font-size:15px; margin-bottom:6px; font-family:'DM Sans',sans-serif; font-weight:700;}
+  .info-box p{color:var(--muted); font-size:15px;}
+
+  .why-card{
+    background:linear-gradient(160deg,var(--amber-soft),#fffdf8);
+    border:1px solid var(--line); border-radius:22px; padding:28px;
+  }
+  .why-card .label{font-size:13px; color:var(--muted); margin-bottom:6px;}
+  .why-card h3{font-size:26px; margin-bottom:22px;}
+  .step{
+    background:#fff; border-radius:14px; padding:16px 18px; margin-bottom:12px;
+    display:flex; gap:16px; align-items:flex-start;
+  }
+  .step.highlight{background:var(--amber-soft);}
+  .step-num{
+    width:34px; height:34px; border-radius:10px; background:var(--amber-soft);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    font-family:'Sora',sans-serif; font-weight:800; color:var(--gold-deep); font-size:14px;
+  }
+  .step.highlight .step-num{background:#fff;}
+  .step h5{font-size:15px; margin-bottom:2px; font-family:'DM Sans',sans-serif; font-weight:700;}
+  .step p{font-size:13px; color:var(--muted);}
+
+  /* SERVICES */
+  .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .service-card{
+    border:1px solid var(--line); border-radius:18px; padding:26px;
+    background:#fff; transition:transform .2s, box-shadow .2s;
+    display:flex; flex-direction:column;
+  }
+  .service-card:hover{transform:translateY(-4px); box-shadow:0 16px 36px rgba(212,134,15,0.12); border-color:var(--gold);}
+  .service-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:18px;}
+  .service-icon{
+    width:46px; height:46px; border-radius:13px; background:var(--amber-soft);
+    display:flex; align-items:center; justify-content:center; font-size:21px;
+  }
+  .sol-tag{text-align:right; font-size:12px; color:var(--muted);}
+  .sol-tag b{display:block; color:var(--gold-deep); font-family:'Sora',sans-serif; font-size:14px;}
+  .service-card h3{font-size:19px; margin-bottom:8px;}
+  .service-card > p{font-size:14px; color:var(--muted); margin-bottom:16px;}
+  .service-card ul{list-style:none; margin-bottom:20px; flex-grow:1;}
+  .service-card ul li{font-size:13.5px; color:var(--ink); padding-left:18px; position:relative; margin-bottom:6px;}
+  .service-card ul li::before{content:''; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--gold);}
+  .book-link{font-weight:700; color:var(--gold-deep); font-size:14px; display:inline-flex; align-items:center; gap:6px;}
+
+  /* WHY US */
+  .points-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .point-card{border:1px solid var(--line); border-radius:18px; padding:24px; background:#fff;}
+  .point-top{display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:18px;}
+  .point-icon{
+    width:46px; height:46px; border-radius:13px; background:var(--black);
+    color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px;
+  }
+  .point-tag{font-size:12px; color:var(--muted); text-align:right;}
+  .point-tag b{display:block; color:var(--ink); font-family:'Sora',sans-serif; font-size:15px;}
+  .point-card h4{font-size:17px; margin-bottom:6px;}
+  .point-card p{font-size:14px; color:var(--muted);}
+
+  /* TESTIMONIALS */
+  .test-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .test-card{border:1px solid var(--line); border-radius:18px; padding:24px; background:#fff;}
+  .test-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:18px;}
+  .test-icon{width:42px; height:42px; border-radius:10px; background:var(--amber-soft); display:flex; align-items:center; justify-content:center; font-size:19px;}
+  .test-rating{font-size:12px; color:var(--muted); text-align:right;}
+  .test-rating b{color:var(--gold-deep); font-size:15px; display:block;}
+  .test-card p.quote{font-size:14.5px; color:var(--ink); margin-bottom:18px; font-style:italic;}
+  .test-card .name{font-weight:700; font-size:14px;}
+  .test-card .role{font-size:12.5px; color:var(--muted);}
+
+  /* FAQ */
+  .faq-list{max-width:760px; margin:0 auto; border:1px solid var(--line); border-radius:18px; overflow:hidden; background:var(--amber-soft);}
+  .faq-item{border-bottom:1px solid var(--line); background:var(--amber-soft);}
+  .faq-item:last-child{border-bottom:none;}
+  .faq-q{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 24px; cursor:pointer; font-weight:700; font-size:15.5px;
+    gap:16px;
+  }
+  .faq-q .plus{
+    width:30px; height:30px; border-radius:50%; background:#fff;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    font-size:18px; font-weight:400; transition:transform .2s;
+  }
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{padding:0 24px; max-height:0; overflow:hidden; transition:max-height .25s ease, padding .25s ease; font-size:14.5px; color:var(--muted);}
+  .faq-item.open .faq-a{max-height:200px; padding:0 24px 22px;}
+  .faq-hint{font-size:13px; color:var(--muted); margin-top:-4px;}
+
+  /* ENQUIRY / CONTACT */
+  .enq-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:24px;}
+  .emerg-card{border:1px solid var(--line); border-radius:18px; padding:24px; background:var(--amber-soft);}
+  .emerg-card h4{font-size:16px; margin-bottom:8px;}
+  .emerg-card p{font-size:14px; color:var(--muted); margin-bottom:20px;}
+  .emerg-call{
+    display:block; width:100%; text-align:center; padding:15px; border-radius:12px;
+    font-weight:700; margin-bottom:12px; font-size:15px;
+  }
+  .emerg-call.primary{background:linear-gradient(135deg,var(--gold),var(--gold-deep)); color:#fff;}
+  .emerg-call.secondary{background:#fff; border:1px solid var(--line); color:var(--ink);}
+  .emerg-detail{background:#fff; border-radius:12px; padding:16px 18px; margin-top:6px;}
+  .emerg-detail .lbl{font-size:12px; color:var(--muted); margin-bottom:4px;}
+  .emerg-detail .val{font-weight:700; font-size:14.5px;}
+
+  .form-card{border:1px solid var(--line); border-radius:18px; padding:28px; background:#fff;}
+  .form-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;}
+  .form-head h4{font-size:16px;}
+  .tag-fast{font-size:12px; font-weight:700; color:var(--gold-deep); background:var(--amber-soft); padding:6px 14px; border-radius:999px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;}
+  .form-field label{display:block; font-size:13px; font-weight:700; margin-bottom:6px;}
+  .form-field input, .form-field select, .form-field textarea{
+    width:100%; border:1px solid var(--line); border-radius:10px; padding:13px 14px;
+    font-family:inherit; font-size:14px; background:var(--cream); color:var(--ink);
+  }
+  .form-field textarea{resize:vertical; min-height:110px;}
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus{
+    outline:2px solid var(--gold); border-color:transparent;
+  }
+  .submit-btn{
+    width:100%; padding:16px; border:none; border-radius:12px; font-weight:800; font-size:15px;
+    background:linear-gradient(135deg,var(--gold),var(--gold-deep)); color:#fff; cursor:pointer;
+    margin-top:6px;
+  }
+  .form-note{font-size:12px; color:var(--muted); margin-top:10px; text-align:center;}
+
+  /* CONTACT SECTION */
+  .contact-grid{display:grid; grid-template-columns:0.8fr 1.2fr; gap:24px;}
+  .contact-card{border:1px solid var(--line); border-radius:18px; padding:26px; background:#fff;}
+  .contact-card .lbl{font-size:12px; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:8px;}
+  .contact-pill{
+    background:var(--amber-soft); border-radius:10px; padding:14px 16px;
+    font-weight:700; margin-bottom:10px; font-size:15px; color:var(--gold-deep);
+  }
+  .contact-email{
+    border:1px solid var(--line); border-radius:10px; padding:14px 16px;
+    font-weight:700; margin-bottom:18px; font-size:14.5px; word-break:break-all;
+  }
+  .contact-card .addr{font-size:14.5px; color:var(--muted); margin-bottom:22px;}
+  .map-card{border:1px solid var(--line); border-radius:18px; overflow:hidden; background:#fff;}
+  .map-card .map-head{padding:22px 24px 16px;}
+  .map-card .map-head h4{font-size:16px; margin-bottom:4px;}
+  .map-card .map-head p{font-size:13.5px; color:var(--muted);}
+  .map-card iframe{width:100%; height:340px; border:0; display:block;}
+
+  /* FOOTER */
+  footer{background:var(--black); color:#f4ead9; padding:64px 0 24px;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:48px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.1);}
+  .footer-brand{display:flex; align-items:center; gap:12px; margin-bottom:14px;}
+  .footer-brand .logo{
+    width:46px; height:46px; border-radius:11px;
+    overflow:hidden;
+    display:flex; align-items:center; justify-content:center;
+    background:#fffaf0;
+  }
+  .footer-brand .logo img{width:100%; height:100%; object-fit:cover;}
+  .footer-brand strong{font-family:'Sora',sans-serif; font-size:16px; display:block;}
+  .footer-brand span{font-size:12px; color:#b8ad99;}
+  footer p.desc{font-size:14px; color:#b8ad99; max-width:320px; margin-bottom:20px;}
+  .social-row{display:flex; gap:10px;}
+  .social-row a{
+    width:38px; height:38px; border-radius:10px; background:rgba(255,255,255,0.06);
+    display:flex; align-items:center; justify-content:center; font-size:15px;
+  }
+  footer h5{font-family:'Sora',sans-serif; font-size:15px; margin-bottom:18px; color:#fff;}
+  footer .flinks{display:flex; flex-direction:column; gap:12px; font-size:14px; color:#cfc4b0;}
+  footer .fcontact{display:flex; flex-direction:column; gap:12px; font-size:14px; color:#cfc4b0;}
+  footer .fcontact b{color:#fff;}
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center; padding-top:24px;
+    font-size:13px; color:#9c916f; flex-wrap:wrap; gap:10px;
+  }
+
+  /* WHATSAPP */
+  .whatsapp-float{
+    position:fixed; bottom:24px; right:24px; z-index:60;
+    background:var(--black); color:#fff; display:flex; align-items:center; gap:10px;
+    padding:14px 20px; border-radius:999px; font-weight:700; font-size:14px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+  }
+  .whatsapp-float .wico{
+    width:24px; height:24px; border-radius:50%; background:var(--gold);
+    display:flex; align-items:center; justify-content:center; font-size:13px;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 980px){
+    nav.links{display:none;}
+    .menu-toggle{display:block;}
+    .hero-grid, .about-grid, .enq-grid, .contact-grid{grid-template-columns:1fr; gap:32px;}
+    .services-grid, .points-grid, .test-grid{grid-template-columns:1fr 1fr;}
+    .stat-grid{grid-template-columns:1fr;}
+    .hero h1{font-size:38px;}
+    .form-row{grid-template-columns:1fr;}
+  }
+  @media (max-width: 640px){
+    .services-grid, .points-grid, .test-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr; gap:32px;}
+    .hero h1{font-size:32px;}
+    .section-head h2, .about-grid h2{font-size:28px;}
+    .whatsapp-float span.label{display:none;}
+    .whatsapp-float{padding:14px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <div class="logo"><img src="assets/logo-icon.png" alt="Yellow Pest Control Services logo"></div>
+      <div class="names">
+        <strong>YELLOW</strong>
+        <span>Pest Control Services</span>
+      </div>
+    </a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#faq">FAQ</a>
+      <a href="#enquiry">Enquiry</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+918859956356" class="call-btn">Call: +91 8859956356</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="pill-row">
+        <span class="pill dark">Emergency Pest Control</span>
+        <span class="pill outline">Free Inspection & Quote</span>
+      </div>
+      <h1>Protect Your Home & <span class="hl">Business From Pests</span></h1>
+      <p class="lead">Yellow Pest Control Services provides safe, fast, and reliable pest solutions for households and commercial spaces. Get professional treatment for termites, rodents, wood borers, pipeline issues, and more.</p>
+      <div class="btn-row">
+        <a href="tel:+918859956356" class="btn btn-primary">Call Now +91 8859956356</a>
+        <a href="tel:+919870540563" class="btn btn-outline">+91 9870540563</a>
+      </div>
+      <div class="btn-row-2">
+        <a href="#enquiry" class="btn btn-dark">Book Inspection</a>
+        <span class="micro-note">Quick response • Experienced technicians • Guaranteed results</span>
+      </div>
+      <div class="stat-grid">
+        <div class="stat"><div class="label">Trusted Experts</div><div class="value">Mohd. Azad</div></div>
+        <div class="stat"><div class="label">Areas</div><div class="value">Delhi NCR</div></div>
+        <div class="stat"><div class="label">Services</div><div class="value">All Pest Types</div></div>
+      </div>
+    </div>
+
+    <div class="focus-card">
+      <div class="top-title">
+        <div>
+          <div class="top-label">Today's Focus</div>
+          <h3>Termite & Rodent Control</h3>
+        </div>
+        <div class="focus-icon">🛡️</div>
+      </div>
+      <div class="focus-item">
+        <div><div class="ft">Termite Solutions</div><div class="fd">Pre & Post treatment for buildings and homes.</div></div>
+        <div class="focus-num">1</div>
+      </div>
+      <div class="focus-item">
+        <div><div class="ft">Rodents (Rats Only)</div><div class="fd">Safe baiting & control measures.</div></div>
+        <div class="focus-num">2</div>
+      </div>
+      <div class="focus-item">
+        <div><div class="ft">Pipeline Treatment</div><div class="fd">Prevention of contamination and leakage risks.</div></div>
+        <div class="focus-num">3</div>
+      </div>
+      <div class="cta-banner">
+        <div><div class="ct">Free Inspection CTA</div><div class="cb">Schedule your visit today</div></div>
+        <button class="book-pill" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})">Book</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container about-grid">
+    <div>
+      <div class="eyebrow">About Yellow Pest</div>
+      <h2>Experienced, trusted pest control experts</h2>
+      <p class="lead">We focus on complete pest solutions—inspection, treatment, and long-term prevention—with safe chemicals and professional service.</p>
+      <div class="info-box">
+        <h4>What we do</h4>
+        <p>From termites and rodents to wood borer and pipeline treatments, our team delivers targeted solutions for different pest types and property conditions.</p>
+      </div>
+      <div class="info-box">
+        <h4>How we work</h4>
+        <p>We start with a proper inspection, recommend the right treatment plan (pre/post where needed), and ensure reliable follow-ups.</p>
+      </div>
+    </div>
+    <div class="why-card">
+      <div class="label">Why choose us</div>
+      <h3>Clean process. Strong results.</h3>
+      <div class="step">
+        <div class="step-num">01</div>
+        <div><h5>Inspection</h5><p>Identify pest type and entry points.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div><h5>Treatment Plan</h5><p>Right solution for your property.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div><h5>Pre/Post Solutions</h5><p>Termite and long-term prevention.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div><h5>Assurance</h5><p>Follow-ups and guidance for safety.</p></div>
+      </div>
+      <div class="step highlight">
+        <div class="step-num">★</div>
+        <div><h5>Safe chemicals • Professional team</h5><p>Reliable pest control designed for homes and businesses.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background:var(--cream); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Our Services</div>
+      <h2>Complete pest solutions for homes and businesses</h2>
+      <p>Choose the service you need. Each solution is delivered with professional care and safe treatment methods.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-icon">🏠</div>
+          <div class="sol-tag"><b>#01</b>Solution</div>
+        </div>
+        <h3>Household Pest Control</h3>
+        <p>Targeted treatments for common household pests—fast action with safe methods.</p>
+        <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
+        <a href="#enquiry" class="book-link">Book inspection →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-icon">⚠️</div>
+          <div class="sol-tag"><b>#02</b>Solution</div>
+        </div>
+        <h3>Termite Solutions (Pre/Post)</h3>
+        <p>Pre-construction prevention and post-treatment for termites—systematic and effective.</p>
+        <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
+        <a href="#enquiry" class="book-link">Book inspection →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-icon">💧</div>
+          <div class="sol-tag"><b>#03</b>Solution</div>
+        </div>
+        <h3>Waterproofing Solutions</h3>
+        <p>Reduce moisture issues with reliable waterproofing—help prevent pest attraction.</p>
+        <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
+        <a href="#enquiry" class="book-link">Book inspection →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-icon">🐀</div>
+          <div class="sol-tag"><b>#04</b>Solution</div>
+        </div>
+        <h3>Rodent Solutions (Rats Only)</h3>
+        <p>Safe rodent control for rats with proper baiting and prevention measures.</p>
+        <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
+        <a href="#enquiry" class="book-link">Book inspection →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-icon">🪵</div>
+          <div class="sol-tag"><b>#05</b>Solution</div>
+        </div>
+        <h3>Wood Borer Solution</h3>
+        <p>Treat and prevent wood-boring insects to protect furniture and structures.</p>
+        <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
+        <a href="#enquiry" class="book-link">Book inspection →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-top">
+          <div class="service-icon">🚿</div>
+          <div class="sol-tag"><b>#06</b>Solution</div>
+        </div>
+        <h3>Pipeline Treatment</h3>
+        <p>Professional pipeline treatment to improve safety and prevent future issues.</p>
+        <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
+        <a href="#enquiry" class="book-link">Book inspection →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Why Choose Us</div>
+      <h2>Effective pest control with a professional approach</h2>
+      <p>We combine safe chemical use, expert technicians, and efficient treatment processes to deliver results you can trust.</p>
+    </div>
+    <div class="points-grid">
+      <div class="point-card">
+        <div class="point-top"><div class="point-icon">₹</div><div class="point-tag"><b>1</b>Point</div></div>
+        <h4>Affordable pricing</h4>
+        <p>Transparent quotes with value-focused service for every budget.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-top"><div class="point-icon">✓</div><div class="point-tag"><b>2</b>Point</div></div>
+        <h4>Safe chemicals</h4>
+        <p>Professional-grade, safe treatment methods for homes and offices.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-top"><div class="point-icon">⚡</div><div class="point-tag"><b>3</b>Point</div></div>
+        <h4>Fast service</h4>
+        <p>Quick response and timely scheduling for urgent pest issues.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-top"><div class="point-icon">👤</div><div class="point-tag"><b>4</b>Point</div></div>
+        <h4>Professional team</h4>
+        <p>Trained technicians with the right tools and process.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-top"><div class="point-icon">★</div><div class="point-tag"><b>5</b>Point</div></div>
+        <h4>Guaranteed results</h4>
+        <p>Reliable solutions with follow-ups to ensure effectiveness.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section style="background:var(--cream); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Testimonials</div>
+      <h2>Trusted by customers across Delhi NCR</h2>
+      <p>Real feedback from households and businesses who received professional pest control services.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div class="test-top"><div class="test-icon">🛡️</div><div class="test-rating"><b>5.0 ★</b>Rating</div></div>
+        <p class="quote">"Quick inspection and effective termite treatment. We noticed results within days and got proper guidance."</p>
+        <div class="name">Aman S.</div>
+        <div class="role">Household Client</div>
+      </div>
+      <div class="test-card">
+        <div class="test-top"><div class="test-icon">🛡️</div><div class="test-rating"><b>5.0 ★</b>Rating</div></div>
+        <p class="quote">"Professional team and safe chemicals. The service was fast and the issue was handled properly."</p>
+        <div class="name">Neha K.</div>
+        <div class="role">Business Client</div>
+      </div>
+      <div class="test-card">
+        <div class="test-top"><div class="test-icon">🛡️</div><div class="test-rating"><b>5.0 ★</b>Rating</div></div>
+        <p class="quote">"Wood borer solution was handled systematically. Follow-up and reassurance made it a great experience."</p>
+        <div class="name">Rahul M.</div>
+        <div class="role">Property Owner</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">FAQ</div>
+      <h2>Common questions about pest control</h2>
+      <p>Get quick answers before you book inspection. If you have more questions, send an enquiry.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do you provide free inspection?</span>
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a">Yes. We offer a free inspection and guidance for the right treatment plan.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Are the chemicals safe for homes?</span>
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a">Yes. We use professional-grade, low-odor chemicals that are safe for homes, offices, and pets when applied as directed by our trained technicians.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Do you handle termite pre and post solutions?</span>
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a">Yes. We provide both pre-construction termite prevention and post-construction termite treatment with long-term protection plans.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Which rodents do you treat?</span>
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a">We currently specialize in rat control using safe baiting and prevention measures.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How soon can we get service?</span>
+          <span class="plus">+</span>
+        </div>
+        <div class="faq-a">For urgent pest issues, we aim to schedule a visit within 24-48 hours. Call us directly for emergency support.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section id="enquiry" style="background:var(--cream); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Free Inspection</div>
+      <h2>Book your pest inspection</h2>
+      <p>Send your details and we'll get back quickly with the right solution. You can also call us directly.</p>
+    </div>
+    <div class="enq-grid">
+      <div class="emerg-card">
+        <h4>Emergency Help Banner</h4>
+        <p>Urgent pest activity? Contact us now for fast scheduling and immediate guidance.</p>
+        <a href="tel:+918859956356" class="emerg-call primary">Call +91 8859956356</a>
+        <a href="tel:+919870540563" class="emerg-call secondary">Call +91 9870540563</a>
+        <div class="emerg-detail">
+          <div class="lbl">Email</div>
+          <div class="val">infoyellowpest@gmail.com</div>
+        </div>
+        <div class="emerg-detail">
+          <div class="lbl">Address</div>
+          <div class="val">Kh No. 2105, D Block, Rohan Enclave, Dasna Ghaziabad</div>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="form-head">
+          <h4>Enquiry Form</h4>
+          <span class="tag-fast">Fast Response</span>
+        </div>
+       <form id="enquiryForm" action="https://formspree.io/f/mdavbnwn" method="POST">
+
+  <input type="hidden" name="_subject" value="New Enquiry - Yellow Pest Control Services">
+
+  <div class="form-row">
+
+    <div class="form-field">
+      <label>Full Name*</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your name"
+        required
+      >
+      <span class="error" id="nameError"></span>
+    </div>
+
+    <div class="form-field">
+      <label>Phone Number*</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="8859956356"
+        required
+      >
+      <span class="error" id="phoneError"></span>
+    </div>
+
+  </div>
+
+  <div class="form-row">
+
+    <div class="form-field">
+      <label>Email*</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="name@example.com"
+        required
+      >
+      <span class="error" id="emailError"></span>
+    </div>
+
+    <div class="form-field">
+      <label>Service Required*</label>
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option>Household Pest Control</option>
+        <option>Termite Solutions (Pre/Post)</option>
+        <option>Waterproofing Solutions</option>
+        <option>Rodent Solutions (Rats Only)</option>
+        <option>Wood Borer Solution</option>
+        <option>Pipeline Treatment</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="form-field" style="margin-bottom:16px;">
+    <label>Address*</label>
+    <input
+      type="text"
+      name="address"
+      placeholder="House/Office Address"
+      required
+    >
+  </div>
+
+  <div class="form-field">
+    <label>Message*</label>
+    <textarea
+      name="message"
+      placeholder="Describe your pest problem"
+      required
+    ></textarea>
+  </div>
+
+  <button type="submit" class="submit-btn" id="submitBtn">
+    Send Enquiry
+  </button>
+
+</form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Contact</div>
+      <h2>Get in touch with Yellow Pest Control Services</h2>
+      <p>Call, email, or visit us. For quick scheduling, use the enquiry form or WhatsApp button.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="lbl">Phone</div>
+        <a href="tel:+918859956356" class="contact-pill" style="display:block;">+91 8859956356</a>
+        <a href="tel:+919870540563" class="contact-pill" style="display:block;">+91 9870540563</a>
+        <div class="lbl" style="margin-top:18px;">Email</div>
+        <a href="mailto:infoyellowpest@gmail.com" class="contact-email" style="display:block;">infoyellowpest@gmail.com</a>
+        <div class="lbl">Address</div>
+        <p class="addr">Kh No. 2105, D Block, Rohan Enclave, Dasna Ghaziabad</p>
+        <div class="cta-banner" style="margin-top:0;">
+          <div><div class="ct">Free Inspection CTA</div><div class="cb">Book your service today</div></div>
+          <button class="book-pill" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})">Book Inspection</button>
+        </div>
+      </div>
+      <div class="map-card">
+        <div class="map-head">
+          <h4>Google Maps</h4>
+          <p>Find us near Dasna, Ghaziabad.</p>
+        </div>
+        <iframe
+          src="https://www.google.com/maps?q=Rohan+Enclave+Dasna+Ghaziabad&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Yellow Pest Control Services location map">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="logo"><img src="assets/logo-icon.png" alt="Yellow Pest Control Services logo"></div>
+          <div>
+            <strong>YELLOW</strong>
+            <span>Pest Control Services</span>
+          </div>
+        </div>
+        <p class="desc">Professional pest control solutions for households and businesses across Delhi NCR.</p>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◻</a>
+          <a href="tel:+918859956356" aria-label="Call">↗</a>
+        </div>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <div class="flinks">
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#why-us">Why Choose Us</a>
+          <a href="#faq">FAQ</a>
+          <a href="#enquiry">Enquiry</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <div class="fcontact">
+          <span><b>+91 8859956356</b></span>
+          <span><b>+91 9870540563</b></span>
+          <span><b>infoyellowpest@gmail.com</b></span>
+          <span>Kh No. 2105, D Block, Rohan Enclave, Dasna Ghaziabad</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Yellow Pest Control Services. All rights reserved.</span>
+      <span>Made for fast, safe, and professional pest treatments.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/918859956356" target="_blank" class="whatsapp-float">
+  <span class="wico">●</span>
+  <span class="label">WhatsApp</span>
+</a>
+
+<script>
+  function toggleFaq(el){
+    const item = el.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if(!isOpen) item.classList.add('open');
+    item.querySelector('.plus').textContent = item.classList.contains('open') ? '+' : '+';
+  }
+ const enquiryForm = document.getElementById("enquiryForm");
+
+enquiryForm.addEventListener("submit", function(e){
+
+    const name = document.getElementById("name");
+    const phone = document.getElementById("phone");
+    const email = document.getElementById("email");
+
+    const nameError = document.getElementById("nameError");
+    const phoneError = document.getElementById("phoneError");
+    const emailError = document.getElementById("emailError");
+
+    nameError.textContent = "";
+    phoneError.textContent = "";
+    emailError.textContent = "";
+
+    name.classList.remove("input-error");
+    phone.classList.remove("input-error");
+    email.classList.remove("input-error");
+
+    let isValid = true;
+
+    const nameRegex = /^[A-Za-z ]{3,50}$/;
+    const phoneRegex = /^[6-9][0-9]{9}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if(!nameRegex.test(name.value.trim())){
+        nameError.textContent =
+            "Name must contain only letters and be 3-50 characters.";
+        name.classList.add("input-error");
+        isValid = false;
+    }
+
+    if(!phoneRegex.test(phone.value.trim())){
+        phoneError.textContent =
+            "Enter a valid 10-digit Indian mobile number.";
+        phone.classList.add("input-error");
+        isValid = false;
+    }
+
+    if(!emailRegex.test(email.value.trim())){
+        emailError.textContent =
+            "Enter a valid email address.";
+        email.classList.add("input-error");
+        isValid = false;
+    }
+
+    if(!isValid){
+        e.preventDefault();
+        return;
+    }
+
+    const btn = document.getElementById("submitBtn");
+    btn.disabled = true;
+    btn.textContent = "Sending...";
+});
+
+
+
+document.getElementById("phone").addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9]/g, "").slice(0, 10);
+});
+
+document.getElementById("name").addEventListener("input", function () {
+    this.value = this.value.replace(/[^A-Za-z ]/g, "");
+});
+
+  // Show success message if redirected back with ?sent=true
+  (function(){
+    const params = new URLSearchParams(window.location.search);
+    if(params.get('sent') === 'true'){
+      const note = document.getElementById('formNote');
+      if(note){
+        note.innerHTML = '✅ Thank you! Your enquiry has been sent to <strong>infoyellowpest@gmail.com</strong>. We will contact you shortly. For urgent issues, call <strong>+91 8859956356</strong>.';
+        note.style.color = '#2e7d32';
+      }
+      // Clean up the URL
+      const cleanUrl = window.location.pathname + '#enquiry';
+      window.history.replaceState({}, document.title, cleanUrl);
+    }
+  })();
+
+</script>
+
+</body>
+</html>
