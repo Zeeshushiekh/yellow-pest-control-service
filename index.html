@@ -133,8 +133,10 @@
   /* HERO CARD */
   .focus-card{
     background:#fff; border:1px solid var(--line); border-radius:22px;
-    padding:26px; box-shadow:0 20px 50px rgba(212,134,15,0.08);
+    padding:0; overflow:hidden; box-shadow:0 20px 50px rgba(212,134,15,0.08);
   }
+  .focus-photo{width:100%; height:180px; object-fit:cover; display:block;}
+  .focus-card-body{padding:26px;}
   .focus-card .top-label{font-size:12px; color:var(--muted); margin-bottom:4px;}
   .focus-card .top-title{display:flex; align-items:center; justify-content:space-between; margin-bottom:20px;}
   .focus-card .top-title h3{font-size:21px;}
@@ -206,11 +208,13 @@
   /* SERVICES */
   .services-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
   .service-card{
-    border:1px solid var(--line); border-radius:18px; padding:26px;
+    border:1px solid var(--line); border-radius:18px; padding:0;
     background:#fff; transition:transform .2s, box-shadow .2s;
-    display:flex; flex-direction:column;
+    display:flex; flex-direction:column; overflow:hidden;
   }
   .service-card:hover{transform:translateY(-4px); box-shadow:0 16px 36px rgba(212,134,15,0.12); border-color:var(--gold);}
+  .service-photo{width:100%; height:170px; object-fit:cover; display:block; flex-shrink:0;}
+  .service-body{padding:22px 26px 26px; display:flex; flex-direction:column; flex-grow:1;}
   .service-top{display:flex; align-items:center; justify-content:space-between; margin-bottom:18px;}
   .service-icon{
     width:46px; height:46px; border-radius:13px; background:var(--amber-soft);
@@ -219,7 +223,7 @@
   .sol-tag{text-align:right; font-size:12px; color:var(--muted);}
   .sol-tag b{display:block; color:var(--gold-deep); font-family:'Sora',sans-serif; font-size:14px;}
   .service-card h3{font-size:19px; margin-bottom:8px;}
-  .service-card > p{font-size:14px; color:var(--muted); margin-bottom:16px;}
+  .service-body > p{font-size:14px; color:var(--muted); margin-bottom:16px;}
   .service-card ul{list-style:none; margin-bottom:20px; flex-grow:1;}
   .service-card ul li{font-size:13.5px; color:var(--ink); padding-left:18px; position:relative; margin-bottom:6px;}
   .service-card ul li::before{content:''; position:absolute; left:0; top:8px; width:6px; height:6px; border-radius:50%; background:var(--gold);}
@@ -433,6 +437,8 @@
     </div>
 
     <div class="focus-card">
+      <img src="https://images.unsplash.com/photo-1747659629851-a92bd71149f6?auto=format&fit=crop&w=900&q=80" alt="Pest control technician holding spray equipment for treatment" class="focus-photo" loading="lazy">
+      <div class="focus-card-body">
       <div class="top-title">
         <div>
           <div class="top-label">Today's Focus</div>
@@ -455,6 +461,7 @@
       <div class="cta-banner">
         <div><div class="ct">Free Inspection CTA</div><div class="cb">Schedule your visit today</div></div>
         <button class="book-pill" onclick="document.getElementById('enquiry').scrollIntoView({behavior:'smooth'})">Book</button>
+      </div>
       </div>
     </div>
   </div>
@@ -513,6 +520,8 @@
     </div>
     <div class="services-grid">
       <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1747659629851-a92bd71149f6?auto=format&fit=crop&w=900&q=80" alt="Technician using a spray gun for household pest treatment" class="service-photo" loading="lazy">
+        <div class="service-body">
         <div class="service-top">
           <div class="service-icon">🏠</div>
           <div class="sol-tag"><b>#01</b>Solution</div>
@@ -521,8 +530,11 @@
         <p>Targeted treatments for common household pests—fast action with safe methods.</p>
         <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
         <a href="#enquiry" class="book-link">Book inspection →</a>
+        </div>
       </div>
       <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1562123404-528b41e573a0?auto=format&fit=crop&w=900&q=80" alt="Termite damage holes in wood needing pre and post treatment" class="service-photo" loading="lazy">
+        <div class="service-body">
         <div class="service-top">
           <div class="service-icon">⚠️</div>
           <div class="sol-tag"><b>#02</b>Solution</div>
@@ -531,8 +543,11 @@
         <p>Pre-construction prevention and post-treatment for termites—systematic and effective.</p>
         <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
         <a href="#enquiry" class="book-link">Book inspection →</a>
+        </div>
       </div>
       <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1693985120993-e9b203ce7631?auto=format&fit=crop&w=900&q=80" alt="Applying waterproof coating to a wall with a roller" class="service-photo" loading="lazy">
+        <div class="service-body">
         <div class="service-top">
           <div class="service-icon">💧</div>
           <div class="sol-tag"><b>#03</b>Solution</div>
@@ -541,8 +556,11 @@
         <p>Reduce moisture issues with reliable waterproofing—help prevent pest attraction.</p>
         <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
         <a href="#enquiry" class="book-link">Book inspection →</a>
+        </div>
       </div>
       <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1540366244940-9dce0a570312?auto=format&fit=crop&w=900&q=80" alt="Rat pest requiring rodent control treatment" class="service-photo" loading="lazy">
+        <div class="service-body">
         <div class="service-top">
           <div class="service-icon">🐀</div>
           <div class="sol-tag"><b>#04</b>Solution</div>
@@ -551,8 +569,11 @@
         <p>Safe rodent control for rats with proper baiting and prevention measures.</p>
         <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
         <a href="#enquiry" class="book-link">Book inspection →</a>
+        </div>
       </div>
       <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1679224099990-a78359fdb543?auto=format&fit=crop&w=900&q=80" alt="Wood grain texture showing timber vulnerable to wood borer" class="service-photo" loading="lazy">
+        <div class="service-body">
         <div class="service-top">
           <div class="service-icon">🪵</div>
           <div class="sol-tag"><b>#05</b>Solution</div>
@@ -561,8 +582,11 @@
         <p>Treat and prevent wood-boring insects to protect furniture and structures.</p>
         <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
         <a href="#enquiry" class="book-link">Book inspection →</a>
+        </div>
       </div>
       <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1505695715220-3a366d958259?auto=format&fit=crop&w=900&q=80" alt="Pipeline used for pipeline pest treatment and inspection" class="service-photo" loading="lazy">
+        <div class="service-body">
         <div class="service-top">
           <div class="service-icon">🚿</div>
           <div class="sol-tag"><b>#06</b>Solution</div>
@@ -571,6 +595,7 @@
         <p>Professional pipeline treatment to improve safety and prevent future issues.</p>
         <ul><li>Inspection & guidance</li><li>Safe, effective treatment</li><li>Professional follow-up</li></ul>
         <a href="#enquiry" class="book-link">Book inspection →</a>
+        </div>
       </div>
     </div>
   </div>
